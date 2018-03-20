@@ -19,7 +19,7 @@ const serverDestroy = promisify(server.destroy, server)
 
 // graceful start
 db.connect()                                      // open DB connection first
-  .then(() => serverListen(port))                 // listen after succss db connection
+  .then(() => serverListen(port))                 // listen after success db connection
   .then(() => {
     console.info(`App is listening on port: ${port}`)
   })
